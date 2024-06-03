@@ -3,17 +3,44 @@ West C
 This program involves garden information"""
 
 import string # imports the Python string module
+'''------- Code Structure ----------
+def main()
+    user_flower = user_validation()
+
+def user_flower_validation()
+    # validate user input
+    return flower
+
+
+if __name__ == "__main__":
+   main()
+ -------------------------------- '''
 
 print("This program collects information about your garden.\n")
 
+# input validation
+# flower_valid = False
+# def user_validation() 
+# while flower_valid == False:
 user_input_flower = input ("Enter one flower to grow in your garden: " ) .lower() # asks for a user input for a flower
-input_flower = user_input_flower
+# Tulips == tulips
+# T8lpis == ?? 
+input_flower = user_input_flower # why do you copy the value to a new variable?
 
 bad_chars = string.whitespace + string.punctuation + string.digits # check for punctation and white space and numbers
+# will .isalpha() work?
 
 for char in user_input_flower:
-    if char in bad_chars: 
-        input_flower = input_flower.replace (char, ' ') # remove the bad characters replace with blank space
+    # if char in bad_chars: 
+    #     input_flower = input_flower.replace (char, ' ') # remove the bad characters replace with blank space
+    if char != user_input_flower.isalpha():
+        # either user_input_flowers = input_flower.replace (char, ' ')
+        # or set up a while loop that requires the user to try again
+        # print("Invalid input, please try again.")
+    else:
+        flower_valid = True
+            
+        
 
 
 # input_vegetable = input ("Enter one vegetable to grow in your garden: ", []) . lower()
@@ -56,3 +83,4 @@ print (f"Remove quotes, add commas, and remove -Tulip- from the list: ", ", ".jo
 
 
 z = input ("Pause, CWest")
+
